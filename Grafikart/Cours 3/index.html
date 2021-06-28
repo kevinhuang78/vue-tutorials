@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VueJS Cours Grafikart 3/15</title>
+	</head>
+	<body>
+
+		<div id="app">
+			<input type="checkbox" v-model="success" />
+			<input type="text" name="message" />
+			{{ message }}
+			<div class="ui message" :class="cls">
+				Salut les gens
+			</div>
+			<p>
+				Prénom : {{ firstname }} <br />
+				Nom : {{ lastname }} <br />
+				Nom complet : <input type="text" v-model="fullname" />
+			</p>
+		</div>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>

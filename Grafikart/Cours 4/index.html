@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VueJS Cours Grafikart 4/15</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<div id="app">
+			<p>
+				<a href="https://www.kevinhuang.fr" @click.prevent="demo">Démonstration</a>
+			</p>
+			<p @click="demo2">
+				<a href="https://www.kevinhuang.fr" @click.prevent.stop="demo3">Démonstration</a> <!-- Capture / self etc... -->
+			</p>
+			<p>
+				<input type="text" v-model.trim="message" @keyup.space="onkeyupinput" /> 
+				<input type="text" @keyup.space="onkeyupinput" v-salut.a.b.c="message" /> {{ message }}
+				<!-- 
+					Lazy pour change quand clic en dehors (éviter trop d'évènements)
+					Number
+					Trim pour enlever espaces
+				-->
+				<!-- 
+					Space ou e.keyCode ou aucun paramètre sur @keyup
+				-->
+			</p>
+		</div>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
